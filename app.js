@@ -6,7 +6,6 @@
 var express = require('express')
   , app = express()
   , routes = require('./routes')
-  , user = require('./routes/user')
   , http = require('http')
   , path = require('path')
   , server = require('http').createServer(app)
@@ -30,13 +29,16 @@ app.configure('development', function(){
 });
 
 app.get('/', routes.index);
-app.get('/users', user.list);
+require('./routes/user')(app);
+
 
 server.listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
 });
 
 
+
+// Socket.io Stuffs
 var userCount = 0; 
 io.sockets.on('connection', function (socket) {
     userCount = userCount+1;
