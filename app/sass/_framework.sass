@@ -1,0 +1,33 @@
+
+
+body
+  background: url(/images/bg_noise.png)
+
+p
+  font-size: 13px
+  line-height: 20px
+
+// Hero area
+.hero
+  height: 150px
+  background: none
+  +border-radius(0)
+  text-align: center
+
+  h1
+    text-shadow: -1.5px -1.5px 2px #3A3A3A
+    position: relative
+    display: inline-block
+
+    &:before, &:after
+      content: attr(title)
+      color: rgba(255,255,255,1)
+      position: absolute
+    &:before
+      top: 1px
+      left: 1px
+      opacity: .12
+    &:after
+      top: 2px
+      left: 2px
+      opacity: .12

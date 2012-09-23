@@ -1,7 +1,17 @@
 doctype 5
 html
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    title Centinaro.net
+    script(type='text/javascript', src='/javascripts/lib/jquery.js')
+    script(type='text/javascript', src='/javascripts/lib/handlebars.runtime.js')
+    script(type='text/javascript', src='/javascripts/lib/jquery.isotope.min.js')
+    script(type='text/javascript', src='/javascripts/templates.handlebars')
+    script(type='text/javascript', src='/javascripts/main.js')
+
+    link(rel='stylesheet', href='/stylesheets/main.css')
+    link(rel='icon', href='/images/favicon.ico')
+    block scripts
+
   body
-    block content
+    .container
+      block content

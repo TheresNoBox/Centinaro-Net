@@ -1,5 +1,19 @@
 extends layout
 
+block scripts
+  script(type="text/javascript")
+    var CentUI = new Cent.UI({
+        "parentContainer": '#CentUI',
+        "profileContainer": ".profileBlocks .row",
+        "siteContent" : "/javascripts/centinaro.json"
+      });
+
 block content
-  h1= title
-  p Welcome to #{title}
+  #CentUI
+    .span12
+      .hero.hero-unit
+        h1(title="We Are The Full Stack.") We Are The Full Stack.
+
+    .span12
+      .profileBlocks
+        .row
