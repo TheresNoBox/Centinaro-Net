@@ -4,12 +4,13 @@
  */
 
 var express = require('express')
+  , app = express()
   , routes = require('./routes')
-  , user = require('./routes/user')
   , http = require('http')
-  , path = require('path');
+  , path = require('path')
+  , server = require('http').createServer(app)
+  , io = require('socket.io').listen(server);
 
-var app = express();
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
@@ -28,8 +29,26 @@ app.configure('development', function(){
 });
 
 app.get('/', routes.index);
-app.get('/users', user.list);
+require('./routes/user')(app);
 
-http.createServer(app).listen(app.get('port'), function(){
+
+server.listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
+});
+
+
+
+// Socket.io Stuffs
+var userCount = 0; 
+io.sockets.on('connection', function (socket) {
+    userCount = userCount+1;
+    console.log('A socket connected!');
+    socket.broadcast.emit('userUpdate', { count: userCount });
+    socket.on('my other event', function (data) {
+      console.log(data);
+    });
+    socket.on('disconnect', function () {
+      userCount = userCount-1;
+      socket.broadcast.emit('userUpdate', { count: userCount });
+    });
 });
