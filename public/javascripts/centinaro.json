@@ -147,6 +147,18 @@
       "thumbnail": "/images/projects/code_blank.png", 
       "url": "https://github.com/TNBBill/multistripe",
       "owner": ["bill"]
+    }, {
+      "name": "AMJ Builders",
+      "description": "A Small-Business Website on our CMS Platform. This site debuted the form submit feature.", 
+      "thumbnail": "/images/projects/kristi_web_2.png", 
+      "url": "//amjbuilders1.com",
+      "owner": ["bill", "kristi"]
+    }, {
+      "name": "One Dollar To Save The World",
+      "description": "A Non-Profit Organization dedicated to building a pollution-free power plant. Kristi did the design, and Bill implemented a donation API with Stripe.com to take donations on the site. Built on our CMS platform.", 
+      "thumbnail": "/images/projects/kristi_web_3.png", 
+      "url": "//dollartosavetheworld.com",
+      "owner": ["bill", "kristi"]
     }
 
   ]

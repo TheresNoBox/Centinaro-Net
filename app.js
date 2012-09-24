@@ -31,6 +31,11 @@ app.configure('development', function(){
 app.get('/', routes.index);
 require('./routes/user')(app);
 
+app.get('/imageGallery', function(req, res){
+  res.render('imageGallery', {
+    title: 'Image Gallery Widget'
+  });
+});
 
 server.listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
