@@ -1,0 +1,130 @@
+{
+  "profiles": [
+      {
+        "name": "Kristi Centinaro",
+        "shortname": "kristi",
+        "title": "I build sexy websites.",
+        "portrait_url": "/images/kristi_photo.jpg",
+        "resume_url": "/docs/KristiCentinaro-Resume2012.pdf",
+        "social_links": [
+          {
+            "name": "twitter",
+            "title": "Kristi on Twitter",
+            "url": "//twitter.com/theresnobox"
+          },{
+            "name": "google",
+            "title": "Kristi's Google+ Profile",
+            "url": "//plus.google.com/u/0/105851997129401536120/"
+          },{
+            "name": "github",
+            "title": "Samples on Github",
+            "url": "//github.com/tnbKristi"
+          },{
+            "name": "deviantart",
+            "title": "Kristi on Deviantart",
+            "url": "//inkjetcanvas.deviantart.com"
+          }
+        ]
+      },{
+        "name": "Bill Centinaro",
+        "shortname": "bill",
+        "title": "I make great websites work.",
+        "portrait_url": "/images/bill_photo.jpg",
+        "resume_url": "/docs/BillCentinaro-Resume2012.pdf",
+        "social_links": [
+          {
+            "name": "twitter",
+            "title": "Bill on Twitter",
+            "url": "//twitter.com/bcentinaro"
+          },{
+            "name": "google",
+            "title": "Bill's Google+ Profile",
+            "url": "//plus.google.com/u/0/117447149473400301135/"
+          },{
+            "name": "github",
+            "title": "Check out my Open Source Projects!",
+            "url": "//github.com/tnbBill"
+          }
+        ]
+    }
+  ],
+  "questions": [
+      {
+        "question": "What do you like doing best?",
+        "answer": {
+          "kristi": "I'm happiest when I'm building dynamic, engaging experiences for people on the web.",
+          "bill": "I like being the man behind the curtain."
+        }
+      },
+      {
+        "question": "Favorite tools of the trade",
+        "answer": {
+          "kristi": "Javascript, HTML5, CSS3",
+          "bill": ""
+        }
+      },
+      {
+        "question": "What are your favorite development tools?",
+        "answer": {
+          "kristi": "I love doing front-end development for anything built in Ruby, Python, and lately, NodeJs. I also prefer to work with SASS over plain CSS.",
+          "bill": ""
+        }
+      },
+      {
+        "question": "What have you been working on lately?",
+        "answer": {
+          "kristi": "At work, I have been building mobile-friendly responsive survey \"widgets\". These are used by thousands of surveyers daily at YouGov across many countries!",
+          "bill": ""
+        }
+      },
+      {
+        "question": "What do you do for fun?",
+        "answer": {
+          "kristi": "I just started CrossFit! I like to work out, play video games (Guild Wars 2!), and paint.",
+          "bill": ""
+        }
+      },
+      {
+        "question": "Any side projects?",
+        "answer": {
+          "kristi": "Bill and I have been building a CMS Network for Small Businesses. We have some very enthusiastic clients that have helped us test. It's going great so far!",
+          "bill": ""
+        }
+      }
+  ],
+  "projects": [
+    {
+      "name": "Red Headed Angel",
+      "description": "A fun remix of a very old picture I painted.",
+      "thumbnail": "/images/projects/kristi_art_1.png", 
+      "url": "//inkjetcanvas.deviantart.com/gallery/#/d4k6e7t",
+      "owner": ["kristi"]
+    }, {
+      "name": "\"Kiss Kiss\"",
+      "description": "Check out the Timelapse Video of this painting!",
+      "thumbnail": "/images/projects/kristi_art_2.png", 
+      "url": "//vimeo.com/18414753",
+      "owner": ["kristi"]
+    }, {
+      "name": "Test Both",
+      "description": "test description of the project goes here.",
+      "thumbnail": "/images/projects/code_blank.png", 
+      "url": "",
+      "owner": ["kristi", "bill"]
+    }, {
+      "name": "Test Bill",
+      "description": "test description of the project goes here.",
+      "thumbnail": "/images/projects/code_blank.png", 
+      "url": "",
+      "owner": ["bill"]
+    }, {
+      "name": "Test Three",
+      "description": "test description of the project goes here.",
+      "thumbnail": "/images/projects/code_blank.png", 
+      "url": "",
+      "owner": ["kristi"]
+    }
+
+  ]
+    
+}
