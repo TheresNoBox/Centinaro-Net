@@ -63,13 +63,13 @@
       display: inline-block
       margin-right: 5px
       &.google
-        background-position-y: 0
+        background-position: 0 0
       &.github
-        background-position-y: -28px
+        background-position: 0 -28px
       &.twitter
-        background-position-y: -56px
+        background-position: 0 -56px
       &.deviantart
-        background-position-y: -84px
+        background-position: 0 -84px
   .btn-group
     .btn
       padding: 10px
@@ -114,7 +114,7 @@
   .project
     color: $white
     margin: 8px
-    max-width: 300px
+    max-width: 250px
     min-height: 120px
     border: 1px solid #bdbdbd
     padding-bottom: 10px
@@ -173,3 +173,14 @@
   #projectView
     .filters
       @extend .btn-group-vertical
+
+@media(max-width: 575px)
+  #projectView
+    padding-top: 40px
+    padding-bottom: 30px
+    .filters
+      position: absolute
+      top: 6px
+      right: 6px
+    .project
+

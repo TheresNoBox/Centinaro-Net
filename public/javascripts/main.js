@@ -101,7 +101,6 @@ Cent.UI.Controller = {
   showProjects: function (buttonNode) {
     var self = this;
     var containerHeight = self.projectBlock.height();
-    var windowWidth = $(window).width();
     // fire isotope before opening the window, to hide
     // any strange stacking effects it likes to do.
     self.filterProjects(buttonNode);
@@ -110,7 +109,7 @@ Cent.UI.Controller = {
     if (self.projectBlock.hasClass('expanded') === false) {
       self.projectBlock.show()
         .animate({
-        'height': '150px',
+        'height': 'auto',
       }, 'linear', function(){
         $(this).css('height', 'auto');
       }).addClass('expanded');
@@ -120,13 +119,12 @@ Cent.UI.Controller = {
 
       // slide up the hero block for more room.
       self.mainContainer.find('.hero').animate({
-        'height': '50px',
+        'height': 'auto',
         'padding-top': '0'
       }, 'fast').css('height', 'auto');
 
-      if (windowWidth < 800) {
-        self.mainContainer.find('.hero .sub-head').hide();
-      }
+      self.mainContainer.find('.hero .sub-head').hide();
+      
 
       $('html,body').animate({
       scrollTop: 0
@@ -166,12 +164,12 @@ Cent.UI.Controller = {
       'height': '0'
     }, 300, 'linear', function(){
       $(this).hide();
-      
+
       self.mainContainer.find('.hero').animate({
-        'height': '150px',
+        'height': 'auto',
         'padding-top': '40px'
       }, 'fast', function(){
-      }).css('height', 'auto');
+      });
       
       self.mainContainer.find('.hero .sub-head').show();
 

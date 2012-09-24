@@ -4542,12 +4542,13 @@ p {
   line-height: 20px; }
 
 .hero {
-  height: 150px;
   background: none;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  text-align: left; }
+  text-align: left;
+  padding-bottom: 0;
+  margin-bottom: 20px; }
   .hero h1 {
     text-shadow: -1.5px -1.5px 2px #3a3a3a;
     position: relative;
@@ -4570,6 +4571,13 @@ p {
     .hero p .icon {
       opacity: 0.5;
       filter: alpha(opacity=50); }
+
+@media(max-width: 575px) {
+  .hero h1 {
+    text-shadow: none; }
+    .hero h1:before, .hero h1:after {
+      content: none;
+      display: none; } }
 
 #footer {
   border-top: 2px dotted #cccccc;
@@ -4629,13 +4637,13 @@ p {
       display: inline-block;
       margin-right: 5px; }
       .profile .social-icons .social.google {
-        background-position-y: 0; }
+        background-position: 0 0; }
       .profile .social-icons .social.github {
-        background-position-y: -28px; }
+        background-position: 0 -28px; }
       .profile .social-icons .social.twitter {
-        background-position-y: -56px; }
+        background-position: 0 -56px; }
       .profile .social-icons .social.deviantart {
-        background-position-y: -84px; }
+        background-position: 0 -84px; }
   .profile .btn-group .btn {
     padding: 10px;
     width: 50%;
@@ -4680,7 +4688,7 @@ p {
   #projectView .project {
     color: white;
     margin: 8px;
-    max-width: 300px;
+    max-width: 250px;
     min-height: 120px;
     border: 1px solid #bdbdbd;
     padding-bottom: 10px;
@@ -4740,6 +4748,15 @@ p {
     height: auto; }
     .hero p br {
       display: none; } }
+@media(max-width: 575px) {
+  #projectView {
+    padding-top: 40px;
+    padding-bottom: 30px; }
+    #projectView .filters {
+      position: absolute;
+      top: 6px;
+      right: 6px; } }
+
 /* Bootstrap Responsive v2.1.1
  *
  * Copyright 2012 Twitter, Inc

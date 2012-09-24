@@ -13,10 +13,11 @@ p
 
 // Hero area
 .hero
-  height: 150px
   background: none
   +border-radius(0)
   text-align: left
+  padding-bottom: 0
+  margin-bottom: 20px
 
   h1
     text-shadow: -1.5px -1.5px 2px #3A3A3A
@@ -40,6 +41,14 @@ p
     color: $darkerGrey
     .icon
       +opacity(50)
+
+@media(max-width: 575px)
+  .hero
+    h1
+      text-shadow: none
+      &:before, &:after
+        content: none
+        display: none
 
 #footer
   border-top: $dottedBorder
