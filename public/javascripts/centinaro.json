@@ -159,6 +159,12 @@
       "thumbnail": "/images/projects/kristi_web_3.png", 
       "url": "//dollartosavetheworld.com",
       "owner": ["bill", "kristi"]
+    }, {
+      "name": "The Unboxed Network",
+      "description": "Our big project - a Subscription-based CMS specialized for small businesses. Template-free architecture, this platform is meant to be a tool for Web Designers to create easy-to-manage websites for their clients quickly and easily. The template building process requires nothing more than HTML/CSS knowledge.", 
+      "thumbnail": "/images/projects/tnb_web_1.png", 
+      "url": "",
+      "owner": ["bill", "kristi"]
     }
 
   ]
