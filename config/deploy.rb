@@ -23,6 +23,17 @@ after "deploy:restart", "deploy:cleanup"
 #   task :start do ; end
 #   task :stop do ; end
 #   task :restart, :roles => :app, :except => { :no_release => true } do
-#     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
-#   end
-# end
+
+before "deploy", "deploy:stopNode"
+after "deploy", "deploy:startNode"
+
+
+namespace :deploy do
+  task :startNode, :roles => :app do
+    run "cd #{current_path} && npm install"
+    run "cd #{current_path} &&  node app.js > /dev/null & echo 'Success'"
+  end
+  task :stopNode, :roles => :app do
+    run "pkill -9 node & echo 'success'"
+  end
+end
