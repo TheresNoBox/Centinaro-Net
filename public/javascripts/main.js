@@ -161,19 +161,20 @@ Cent.UI.Controller = {
     var self = this;
     var windowWidth = $(window).width();
 
-    self.mainContainer.find('.hero').animate({
-      'height': '150px',
-      'padding-top': '40px'
-    }, 'fast', function(){
-    }).css('height', 'auto');
-    
-    self.mainContainer.find('.hero .sub-head').show();
-
 
     self.projectBlock.animate({
       'height': '0'
     }, 300, 'linear', function(){
       $(this).hide();
+      
+      self.mainContainer.find('.hero').animate({
+        'height': '150px',
+        'padding-top': '40px'
+      }, 'fast', function(){
+      }).css('height', 'auto');
+      
+      self.mainContainer.find('.hero .sub-head').show();
+
     }).removeClass('expanded');
   },
 
