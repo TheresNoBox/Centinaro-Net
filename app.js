@@ -8,8 +8,8 @@ var express = require('express')
   , routes = require('./routes')
   , http = require('http')
   , path = require('path')
-  , server = require('http').createServer(app)
-  , io = require('socket.io').listen(server);
+  , server = require('http').createServer(app);
+  //, io = require('socket.io').listen(server);
 
 
 app.configure(function(){
@@ -38,7 +38,7 @@ server.listen(app.get('port'), function(){
 
 
 
-// Socket.io Stuffs
+/* Socket.io Stuffs
 var userCount = 0; 
 io.sockets.on('connection', function (socket) {
     userCount = userCount+1;
@@ -52,3 +52,4 @@ io.sockets.on('connection', function (socket) {
       socket.broadcast.emit('userUpdate', { count: userCount });
     });
 });
+*/

@@ -8,7 +8,7 @@
 
     <div class="social-icons">
       {{#each social_links}}
-        <a href="{{url}}"><span class="social {{name}}"></span></a>
+        <a href="{{url}}" target="_blank" title="{{title}}"><span class="social {{name}}"></span></a>
       {{/each}}
     </div>
     <div class="btn-group">
@@ -16,7 +16,7 @@
         <span class="small">Download</span>
         <span>Resume</span>
       </a>
-      <a class="btn projects" href="javascript:;" data-profile="{{shortname}}">
+      <a class="btn projects" href="javascript:;" data-filter="{{shortname}}">
         <span class="small">View</span>
         <span>Projects</span></a>
     </div>

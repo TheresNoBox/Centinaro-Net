@@ -1,4 +1,4 @@
-<div class="project">
+<div class="project {{#each owner}} {{.}}{{/each}}">
   <div class="image">
     <img src="{{thumbnail}}" />
   </div>
@@ -6,4 +6,7 @@
     <h4 class="name">{{name}}</h4>
     <p class="description">{{description}}</p>
   </div>
+  {{#if url}}
+    <a class="projectLink" href="{{url}}" target="_blank">View Project</a>
+  {{/if}}
 </div>
