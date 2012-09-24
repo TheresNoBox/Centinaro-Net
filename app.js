@@ -40,7 +40,9 @@ app.get('/imageGallery', function(req, res){
 server.listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
 });
-
+server.listen('/tmp/cent.sock', function(){
+  console.log("Express server listening on Socket /tmp/cent.sock");
+});
 
 
 //Socket.io Stuffs

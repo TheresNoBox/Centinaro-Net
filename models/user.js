@@ -1,9 +1,8 @@
 var mongoose = require('mongoose')
-	, db = mongoose.createConnection('localhost', 'centinaroNet');
+	, db = mongoose.connect('localhost', 'centinaroNet');
 
-var userSchema = new mongoose.Schema({
+
+module.exports = new mongoose.Schema({
 	name: String,
 	email: String
 });
-
-
