@@ -3,14 +3,19 @@ extends layout
 block scripts
   //script(src='/socket.io/socket.io.js')
   //script(src='/javascripts/etchasketch.js')
+
   script(type='text/javascript', src='/javascripts/main.js')
 
   script(type="text/javascript")
-    var CentUI = new Cent.UI({
-        "parentContainer": '#CentUI',
-        "profileContainer": ".profileBlocks .row",
-        "siteContent" : "/javascripts/centinaro.json"
+    $(document).ready(function(){
+      var CentUI = new Cent.UI({
+          "parentContainer": '#CentUI',
+          "profileContainer": ".profileBlocks .row",
+          "siteContent" : "/javascripts/centinaro.json"
+        });
+
       });
+
 
 block content
   #CentUI
@@ -31,6 +36,6 @@ block content
     footer#footer
       h4 About This Site
       p We handcrafted this site in less than 2 days using node express, socket.io, precompiled handlebars, bootstrap, sass, and jade. 
-        a(href="http://gitweb.theresnobox.net/centinaro-net/master/tree", target="_blank") View Source Code
+        a(href="//github.com/TheresNoBox/Centinaro-Net", target="_blank") View Source Code
       p.small
         em "Build good, useful things you love, and the rest will follow."
