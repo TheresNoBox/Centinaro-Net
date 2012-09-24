@@ -31,7 +31,7 @@ after "deploy", "deploy:startNode"
 namespace :deploy do
   task :startNode, :roles => :app do
     run "cd #{current_path} && npm install"
-    run "cd #{current_path} && export PORT=80 && node app.js > /dev/null & echo 'Success'"
+    run "cd #{current_path} && node app.js > /dev/null & echo 'Success'"
   end
   task :stopNode, :roles => :app do
     run "pkill -9 node & echo 'success'"
