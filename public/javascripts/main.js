@@ -77,7 +77,7 @@ Cent.UI.Controller = {
     // initialize isotope on the projects
     self.projectBlock.find('.projects').isotope({
       itemSelector: ".project",
-      layoutMode: "masonry",
+      layoutMode: "fitRows",
       animationOption: 'best-available',
       animationOptions: {
            duration: 750,

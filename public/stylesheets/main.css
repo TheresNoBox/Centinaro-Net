@@ -4594,7 +4594,7 @@ p {
   padding: 12px 18px; }
 
 .profileBlocks {
-  margin-bottom: 20px; }
+  margin: 20px 0; }
 
 .profile {
   overflow: hidden; }
@@ -4681,10 +4681,12 @@ p {
   background: url(../images/bg_70pct.png);
   margin-bottom: 20px;
   position: relative;
-  display: none; }
+  display: none;
+  padding-top: 35px; }
   #projectView .filters {
-    float: right;
-    margin: 6px; }
+    position: absolute;
+    top: 6px;
+    right: 6px; }
   #projectView .project {
     color: white;
     margin: 8px;
@@ -4695,16 +4697,18 @@ p {
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     border-radius: 6px; }
-    #projectView .project .image, #projectView .project .details {
-      display: inline-block; }
     #projectView .project .details {
+      display: inline-block;
       vertical-align: top;
       width: 50%; }
-      #projectView .project .details .description {
-        font-size: 12px;
-        line-height: 16px; }
+    #projectView .project .description {
+      font-size: 12px;
+      line-height: 18px;
+      padding: 0 4px 10px 4px; }
     #projectView .project .image {
-      margin-right: 8px; }
+      margin-right: 8px;
+      margin-bottom: 4px;
+      float: left; }
     #projectView .project .projectLink {
       display: block;
       width: 100%;

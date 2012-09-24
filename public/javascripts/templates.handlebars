@@ -84,16 +84,16 @@ function program3(depth0,data) {
   foundHelper = helpers.thumbnail;
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
   else { stack1 = depth0.thumbnail; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
-  buffer += escapeExpression(stack1) + "\" />\n  </div>\n  <div class=\"details\">\n    <h4 class=\"name\">";
+  buffer += escapeExpression(stack1) + "\" />\n  </div>\n  <h4 class=\"name\">";
   foundHelper = helpers.name;
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
   else { stack1 = depth0.name; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
-  buffer += escapeExpression(stack1) + "</h4>\n    <p class=\"description\">";
+  buffer += escapeExpression(stack1) + "</h4>\n  <p class=\"description\">";
   foundHelper = helpers.description;
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
   else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</p>\n  </div>\n  ";
+  buffer += "</p>\n  ";
   stack1 = depth0.url;
   stack1 = helpers['if'].call(depth0, stack1, {hash:{},inverse:self.noop,fn:self.program(3, program3, data)});
   if(stack1 || stack1 === 0) { buffer += stack1; }

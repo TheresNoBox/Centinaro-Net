@@ -22,7 +22,7 @@
 
 // Profile blocks
 .profileBlocks
-  margin-bottom: 20px
+  margin: 20px 0
 
 .profile
   overflow: hidden
@@ -108,9 +108,11 @@
   margin-bottom: 20px
   position: relative
   display: none
+  padding-top: 35px
   .filters
-    float: right
-    margin: 6px
+    position: absolute
+    top: 6px
+    right: 6px
   .project
     color: $white
     margin: 8px
@@ -119,16 +121,18 @@
     border: 1px solid #bdbdbd
     padding-bottom: 10px
     +border-radius(6px)
-    .image, .details
-      display: inline-block
     .details
+      display: inline-block
       vertical-align: top
       width: 50%
-      .description
-        font-size: 12px
-        line-height: 16px
+    .description
+      font-size: 12px
+      line-height: 18px
+      padding: 0 4px 10px 4px
     .image
       margin-right: 8px
+      margin-bottom: 4px
+      float: left
     .projectLink
       display: block
       width: 100%

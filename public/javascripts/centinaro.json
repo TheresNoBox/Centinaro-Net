@@ -106,23 +106,47 @@
       "url": "//vimeo.com/18414753",
       "owner": ["kristi"]
     }, {
-      "name": "Test Both",
-      "description": "test description of the project goes here.",
+      "name": "Image Gallery Widget",
+      "description": "A Work-In-Progress UI for use in our CMS - a way for users to build a dynamic image gallery.",
       "thumbnail": "/images/projects/code_blank.png", 
-      "url": "",
-      "owner": ["kristi", "bill"]
+      "url": "/imageGallery",
+      "owner": ["kristi"]
     }, {
-      "name": "Test Bill",
-      "description": "test description of the project goes here.",
+      "name": "YouGov Research MENA",
+      "description": "I love this site because with one stylesheet it supports Arabic and English. SASS-based style architecture makes this process very simple.",
+      "thumbnail": "/images/projects/kristi_web_1.png", 
+      "url": "//research.mena.yougov.com/ar/",
+      "owner": ["kristi"]
+    }, {
+      "name": "DropWallet (Gem)",
+      "description": "A RubyGem created to connect to DropWallet’s API, intended to provide Active Record / Active Model feel for connecting to the dropwallet API for DropWallet’s various ruby projects.",
+      "thumbnail": "/images/projects/code_blank.png", 
+      "url": "https://rubygems.org/gems/dropwallet",
+      "owner": ["bill"]
+    }, {
+      "name": "Checkout Experience",
+      "description": "DropWallet’s Checkout experience for 3rd party sites, currently slated for deployment to several magazine publisher’s web sites. A responsive interface designed to work with mobile, tablet, and desktop. Written in Ruby, connected to the internal DropWallet API for data access. Ultimately intended to replace multiple dated projects. (<a href=\"https://customer.dropwallet.net/\" target=\"_blank\">link</a> and <a href=\"https://m.dropwallet.net/\" target=\"_blank\">link</a>)",
+      "thumbnail": "/images/projects/code_blank.png", 
+      "url": "http://checkout.dropwallet.net",
+      "owner": ["bill"]
+    }, {
+      "name": "DropWallet API router",
+      "description": "A Node.JS project designed to route API requests to various endpoints, making them appear as a single system. Built in Cache and Security, keeps as much of the load off the end points as possible.", 
       "thumbnail": "/images/projects/code_blank.png", 
       "url": "",
       "owner": ["bill"]
     }, {
-      "name": "Test Three",
-      "description": "test description of the project goes here.",
+      "name": "Cartography",
+      "description": "A simple sitemap generator, designed to build a sitemap XML string... intended to be stored in a database. (A requirement for our Unboxed Network CMS)", 
       "thumbnail": "/images/projects/code_blank.png", 
-      "url": "",
-      "owner": ["kristi"]
+      "url": "https://github.com/TNBBill/cartography",
+      "owner": ["bill"]
+    }, {
+      "name": "MultiStripe",
+      "description": "An API wrapper for <a href=\"stripe.com\" target=\"_blank\">Stripe</a> which allows the API key of a request to be specified in a request by request basis while being thread safe.", 
+      "thumbnail": "/images/projects/code_blank.png", 
+      "url": "https://github.com/TNBBill/multistripe",
+      "owner": ["bill"]
     }
 
   ]
