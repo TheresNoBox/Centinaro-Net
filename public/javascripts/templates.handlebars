@@ -80,7 +80,7 @@ function program3(depth0,data) {
   stack1 = depth0.owner;
   stack1 = helpers.each.call(depth0, stack1, {hash:{},inverse:self.noop,fn:self.program(1, program1, data)});
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\">\n  <div class=\"image\">\n    <img src=\"";
+  buffer += " collapsed\">\n  <div class=\"image\">\n    <img src=\"";
   foundHelper = helpers.thumbnail;
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
   else { stack1 = depth0.thumbnail; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
@@ -92,7 +92,8 @@ function program3(depth0,data) {
   foundHelper = helpers.description;
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
   else { stack1 = depth0.description; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
-  buffer += escapeExpression(stack1) + "</p>\n  </div>\n  ";
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "</p>\n  </div>\n  ";
   stack1 = depth0.url;
   stack1 = helpers['if'].call(depth0, stack1, {hash:{},inverse:self.noop,fn:self.program(3, program3, data)});
   if(stack1 || stack1 === 0) { buffer += stack1; }
@@ -107,18 +108,20 @@ templates['questions.tmpl'] = template(function (Handlebars,depth0,helpers,parti
   foundHelper = helpers.question;
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
   else { stack1 = depth0.question; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
-  buffer += escapeExpression(stack1) + "</p>\n      <div class=\"answer\">";
+  buffer += escapeExpression(stack1) + "</p>\n      <div class=\"answer\"><span class=\"visible-phone\"><b>Kristi: </b></span>";
   stack1 = depth0.answer;
   stack1 = stack1 == null || stack1 === false ? stack1 : stack1.kristi;
   stack1 = typeof stack1 === functionType ? stack1() : stack1;
-  buffer += escapeExpression(stack1) + "</div>\n    </div>\n    <div class=\"span6\">\n      <p class=\"question\">";
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "</div>\n    </div>\n    <div class=\"span6\">\n      <p class=\"question visible-desktop visible-tablet\">";
   foundHelper = helpers.question;
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
   else { stack1 = depth0.question; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
-  buffer += escapeExpression(stack1) + "</p>\n      <div class=\"answer\">";
+  buffer += escapeExpression(stack1) + "</p>\n      <div class=\"answer\"><span class=\"visible-phone\"><b>Bill: </b></span>";
   stack1 = depth0.answer;
   stack1 = stack1 == null || stack1 === false ? stack1 : stack1.bill;
   stack1 = typeof stack1 === functionType ? stack1() : stack1;
-  buffer += escapeExpression(stack1) + "</div>\n    </div>\n  </div>\n</div>\n";
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "</div>\n    </div>\n  </div>\n</div>\n";
   return buffer;});
 })();

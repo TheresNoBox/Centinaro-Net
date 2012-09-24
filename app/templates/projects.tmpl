@@ -1,10 +1,10 @@
-<div class="project {{#each owner}} {{.}}{{/each}}">
+<div class="project {{#each owner}} {{.}}{{/each}} collapsed">
   <div class="image">
     <img src="{{thumbnail}}" />
   </div>
   <div class="details">
     <h4 class="name">{{name}}</h4>
-    <p class="description">{{description}}</p>
+    <p class="description">{{{description}}}</p>
   </div>
   {{#if url}}
     <a class="projectLink" href="{{url}}" target="_blank">View Project</a>

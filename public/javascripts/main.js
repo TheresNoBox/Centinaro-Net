@@ -60,6 +60,14 @@ Cent.UI.Controller = {
     self.bindEvents();
   },
 
+  resizeListener: function(){
+
+    $(window).resize(function(){
+      var windowWidth = $(window).width();
+
+    });
+  },
+
   bindEvents: function () {
     var self = this;
     self.mainContainer.delegate('a.projects', 'click', function(){
@@ -93,21 +101,38 @@ Cent.UI.Controller = {
   showProjects: function (buttonNode) {
     var self = this;
     var containerHeight = self.projectBlock.height();
-    self.mainContainer.find('.hero').animate({
-      'height': '50px',
-      'padding-top': '0'
-    }, 'fast');
+    var windowWidth = $(window).width();
+    // fire isotope before opening the window, to hide
+    // any strange stacking effects it likes to do.
+    self.filterProjects(buttonNode);
 
-    self.projectBlock.show()
-      .animate({
-      'height': '400px',
-    }, 'linear', function(){
-      // refresh isotope when we expand.
+    // prevent unneeded expanding if it's already open.
+    if (self.projectBlock.hasClass('expanded') === false) {
+      self.projectBlock.show()
+        .animate({
+        'height': '150px',
+      }, 'linear', function(){
+        $(this).css('height', 'auto');
+      }).addClass('expanded');
+      // refresh isotope after we expand.
+      // This fires *almost* at the same time, which looks better.
       self.projectBlock.find('.projects').isotope( 'reLayout' );
-      self.filterProjects(buttonNode);
 
-      $(this).css('height', 'auto');
-    });
+      // slide up the hero block for more room.
+      self.mainContainer.find('.hero').animate({
+        'height': '50px',
+        'padding-top': '0'
+      }, 'fast').css('height', 'auto');
+
+      if (windowWidth < 800) {
+        self.mainContainer.find('.hero .sub-head').hide();
+      }
+
+      $('html,body').animate({
+      scrollTop: 0
+      }, 1000);
+      
+    }
   },
 
   filterProjects: function(node) {
@@ -118,10 +143,11 @@ Cent.UI.Controller = {
       .removeClass('active');
 
     if (filterName === 'all') {
-      self.projectBlock.find('.projects').isotope({ filter: '*' }).shuffle();  
-
       self.projectBlock.find('.filters').find('[data-filter="all"]')
         .addClass('active');
+
+      self.projectBlock.find('.projects').isotope({ filter: '*'});  
+
     } else {
       self.projectBlock.find('.projects').isotope({ filter: '.'+filterName });  
 
@@ -133,21 +159,27 @@ Cent.UI.Controller = {
 
   hideProjects: function(node) {
     var self = this;
+    var windowWidth = $(window).width();
 
-    self.mainContainer.find('.hero').animate({
-      'height': '150px',
-      'padding-top': '40px'
-    }, 'fast', function(){
-
-      // clean inline styles
-      $(this).attr('style', '');
-    });
 
     self.projectBlock.animate({
       'height': '0'
     }, 300, 'linear', function(){
       $(this).hide();
-    });
+      
+      self.mainContainer.find('.hero').animate({
+        'height': '150px',
+        'padding-top': '40px'
+      }, 'fast', function(){
+      }).css('height', 'auto');
+      
+      self.mainContainer.find('.hero .sub-head').show();
+
+    }).removeClass('expanded');
+  },
+
+  expandProject: function(node) {
+
   }
 
 };

@@ -29,6 +29,7 @@
   .image
     display: inline-block
     margin-right: 10px
+    margin-bottom: 10px
     border: 1px solid $grey
     padding: 5px
     +box-shadow(4px 4px 5px $grey)
@@ -97,7 +98,7 @@
     margin-top: 5px
     margin-bottom: 10px
     padding-top: 5px
-    border-top: 2px dotted $grey
+    border-top: $dottedBorder
     margin-right: 30px
 
 #projectView
@@ -116,12 +117,16 @@
     max-width: 300px
     min-height: 120px
     border: 1px solid #bdbdbd
+    padding-bottom: 10px
     +border-radius(6px)
     .image, .details
       display: inline-block
     .details
       vertical-align: top
       width: 50%
+      .description
+        font-size: 12px
+        line-height: 16px
     .image
       margin-right: 8px
     .projectLink
@@ -156,3 +161,15 @@
       height: 26px
       display: inline-block
       background: url(../images/icon_collapse.png) no-repeat top left
+
+// Media Queries!
+@media (max-width: 800px)
+  .profile
+    margin: 30px 0
+  .hero
+    height: auto
+    p br
+      display: none
+  #projectView
+    .filters
+      @extend .btn-group-vertical

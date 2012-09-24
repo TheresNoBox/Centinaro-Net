@@ -80,7 +80,7 @@
       {
         "question": "What do you do for fun?",
         "answer": {
-          "kristi": "I just started CrossFit! I like to work out, play video games (Guild Wars 2!), and paint.",
+          "kristi": "I just started CrossFit! I like to work out, play video games (Guild Wars 2!), and <a href=\"//inkjetcanvas.deviantart.com\" target=\"_blank\">paint.</a>",
           "bill": ""
         }
       },
