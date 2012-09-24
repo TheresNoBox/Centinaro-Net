@@ -108,16 +108,16 @@ templates['questions.tmpl'] = template(function (Handlebars,depth0,helpers,parti
   foundHelper = helpers.question;
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
   else { stack1 = depth0.question; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
-  buffer += escapeExpression(stack1) + "</p>\n      <div class=\"answer\">";
+  buffer += escapeExpression(stack1) + "</p>\n      <div class=\"answer\"><span class=\"visible-phone\"><b>Kristi: </b></span>";
   stack1 = depth0.answer;
   stack1 = stack1 == null || stack1 === false ? stack1 : stack1.kristi;
   stack1 = typeof stack1 === functionType ? stack1() : stack1;
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "</div>\n    </div>\n    <div class=\"span6\">\n      <p class=\"question\">";
+  buffer += "</div>\n    </div>\n    <div class=\"span6\">\n      <p class=\"question visible-desktop visible-tablet\">";
   foundHelper = helpers.question;
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
   else { stack1 = depth0.question; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
-  buffer += escapeExpression(stack1) + "</p>\n      <div class=\"answer\">";
+  buffer += escapeExpression(stack1) + "</p>\n      <div class=\"answer\"><span class=\"visible-phone\"><b>Bill: </b></span>";
   stack1 = depth0.answer;
   stack1 = stack1 == null || stack1 === false ? stack1 : stack1.bill;
   stack1 = typeof stack1 === functionType ? stack1() : stack1;

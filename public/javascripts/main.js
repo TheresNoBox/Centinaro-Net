@@ -93,7 +93,7 @@ Cent.UI.Controller = {
   showProjects: function (buttonNode) {
     var self = this;
     var containerHeight = self.projectBlock.height();
-    
+    var windowWidth = $(window).width();
     // fire isotope before opening the window, to hide
     // any strange stacking effects it likes to do.
     self.filterProjects(buttonNode);
@@ -115,6 +115,11 @@ Cent.UI.Controller = {
         'height': '50px',
         'padding-top': '0'
       }, 'fast');
+
+      if (windowWidth < 800) {
+        self.mainContainer.find('.hero').css('height', 'auto')
+          .find('.sub-head').hide();
+      }
     }
   },
 
@@ -141,6 +146,7 @@ Cent.UI.Controller = {
 
   hideProjects: function(node) {
     var self = this;
+    var windowWidth = $(window).width();
 
     self.mainContainer.find('.hero').animate({
       'height': '150px',
@@ -149,6 +155,9 @@ Cent.UI.Controller = {
 
       // clean inline styles
       $(this).attr('style', '');
+      if (windowWidth < 800) {
+        self.mainContainer.find('.hero .sub-head').show();
+      }
     });
 
     self.projectBlock.animate({
