@@ -93,21 +93,29 @@ Cent.UI.Controller = {
   showProjects: function (buttonNode) {
     var self = this;
     var containerHeight = self.projectBlock.height();
-    self.mainContainer.find('.hero').animate({
-      'height': '50px',
-      'padding-top': '0'
-    }, 'fast');
+    
+    // fire isotope before opening the window, to hide
+    // any strange stacking effects it likes to do.
+    self.filterProjects(buttonNode);
 
-    self.projectBlock.show()
-      .animate({
-      'height': '400px',
-    }, 'linear', function(){
-      // refresh isotope when we expand.
+    // prevent unneeded expanding if it's already open.
+    if (self.projectBlock.hasClass('expanded') === false) {
+      self.projectBlock.show()
+        .animate({
+        'height': '150px',
+      }, 'linear', function(){
+        $(this).css('height', 'auto');
+      }).addClass('expanded');
+      // refresh isotope after we expand.
+      // This fires *almost* at the same time, which looks better.
       self.projectBlock.find('.projects').isotope( 'reLayout' );
-      self.filterProjects(buttonNode);
 
-      $(this).css('height', 'auto');
-    });
+      // slide up the hero block for more room.
+      self.mainContainer.find('.hero').animate({
+        'height': '50px',
+        'padding-top': '0'
+      }, 'fast');
+    }
   },
 
   filterProjects: function(node) {
@@ -147,7 +155,11 @@ Cent.UI.Controller = {
       'height': '0'
     }, 300, 'linear', function(){
       $(this).hide();
-    });
+    }).removeClass('expanded');
+  },
+
+  expandProject: function(node) {
+
   }
 
 };

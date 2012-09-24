@@ -4547,11 +4547,10 @@ p {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  text-align: center; }
+  text-align: left; }
   .hero h1 {
     text-shadow: -1.5px -1.5px 2px #3a3a3a;
     position: relative;
-    display: inline-block;
     margin-bottom: 8px; }
     .hero h1:before, .hero h1:after {
       content: attr(title);
@@ -4571,6 +4570,11 @@ p {
     .hero p .icon {
       opacity: 0.5;
       filter: alpha(opacity=50); }
+
+#footer {
+  border-top: 2px dotted #cccccc;
+  padding-top: 8px;
+  margin-top: 8px; }
 
 .btn-xsmall {
   font-size: 9px;
@@ -4678,6 +4682,7 @@ p {
     max-width: 300px;
     min-height: 120px;
     border: 1px solid #bdbdbd;
+    padding-bottom: 10px;
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     border-radius: 6px; }
@@ -4686,6 +4691,9 @@ p {
     #projectView .project .details {
       vertical-align: top;
       width: 50%; }
+      #projectView .project .details .description {
+        font-size: 12px;
+        line-height: 16px; }
     #projectView .project .image {
       margin-right: 8px; }
     #projectView .project .projectLink {

@@ -97,7 +97,7 @@
     margin-top: 5px
     margin-bottom: 10px
     padding-top: 5px
-    border-top: 2px dotted $grey
+    border-top: $dottedBorder
     margin-right: 30px
 
 #projectView
@@ -116,12 +116,16 @@
     max-width: 300px
     min-height: 120px
     border: 1px solid #bdbdbd
+    padding-bottom: 10px
     +border-radius(6px)
     .image, .details
       display: inline-block
     .details
       vertical-align: top
       width: 50%
+      .description
+        font-size: 12px
+        line-height: 16px
     .image
       margin-right: 8px
     .projectLink
