@@ -60,6 +60,14 @@ Cent.UI.Controller = {
     self.bindEvents();
   },
 
+  resizeListener: function(){
+
+    $(window).resize(function(){
+      var windowWidth = $(window).width();
+
+    });
+  },
+
   bindEvents: function () {
     var self = this;
     self.mainContainer.delegate('a.projects', 'click', function(){
@@ -114,12 +122,16 @@ Cent.UI.Controller = {
       self.mainContainer.find('.hero').animate({
         'height': '50px',
         'padding-top': '0'
-      }, 'fast');
+      }, 'fast').css('height', 'auto');
 
       if (windowWidth < 800) {
-        self.mainContainer.find('.hero').css('height', 'auto')
-          .find('.sub-head').hide();
+        self.mainContainer.find('.hero .sub-head').hide();
       }
+
+      $('html,body').animate({
+      scrollTop: 0
+      }, 1000);
+      
     }
   },
 
@@ -131,10 +143,11 @@ Cent.UI.Controller = {
       .removeClass('active');
 
     if (filterName === 'all') {
-      self.projectBlock.find('.projects').isotope({ filter: '*' }).shuffle();  
-
       self.projectBlock.find('.filters').find('[data-filter="all"]')
         .addClass('active');
+
+      self.projectBlock.find('.projects').isotope({ filter: '*'});  
+
     } else {
       self.projectBlock.find('.projects').isotope({ filter: '.'+filterName });  
 
@@ -152,13 +165,10 @@ Cent.UI.Controller = {
       'height': '150px',
       'padding-top': '40px'
     }, 'fast', function(){
+    }).css('height', 'auto');
+    
+    self.mainContainer.find('.hero .sub-head').show();
 
-      // clean inline styles
-      $(this).attr('style', '');
-      if (windowWidth < 800) {
-        self.mainContainer.find('.hero .sub-head').show();
-      }
-    });
 
     self.projectBlock.animate({
       'height': '0'
