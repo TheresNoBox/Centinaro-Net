@@ -88,7 +88,7 @@
         "question": "Any side projects?",
         "answer": {
           "kristi": "Bill and I have been building a CMS Network for Small Businesses. We have some very enthusiastic clients that have helped us test. It's going great so far!",
-          "bill": ""
+          "bill": "What she said. :)"
         }
       }
   ],
@@ -143,7 +143,7 @@
       "owner": ["bill"]
     }, {
       "name": "MultiStripe",
-      "description": "An API wrapper for <a href=\"stripe.com\" target=\"_blank\">Stripe</a> which allows the API key of a request to be specified in a request by request basis while being thread safe.", 
+      "description": "An API wrapper for <a href=\"http://stripe.com\" target=\"_blank\">Stripe</a> which allows the API key of a request to be specified in a request by request basis while being thread safe.", 
       "thumbnail": "/images/projects/code_blank.png", 
       "url": "https://github.com/TNBBill/multistripe",
       "owner": ["bill"]
