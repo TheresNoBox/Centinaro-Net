@@ -77,13 +77,14 @@ Cent.UI.Controller = {
     // initialize isotope on the projects
     self.projectBlock.find('.projects').isotope({
       itemSelector: ".project",
-      layoutMode: "fitRows",
+      layoutMode: "masonry",
       animationOption: 'best-available',
       animationOptions: {
            duration: 750,
            easing: 'linear',
            queue: false
-      }
+      },
+      sortBy: 'random'
     });
 
     self.projectBlock.delegate('.filters .btn', 'click', function(){
