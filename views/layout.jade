@@ -1,5 +1,14 @@
 doctype 5
-html
+!!! 5
+//if lt IE 8
+    html(class="ie7 iexpl", lang="en")
+//if IE 8
+    html(class="ie8 iexpl", lang="en")
+//if gte IE 9
+    html(class="iexpl", lang="en")
+// [if !IE] <!
+html(lang="en")
+    // <![endif]
   head
     title Centinaro.net
     meta(name="viewport", content="width=device-width")
