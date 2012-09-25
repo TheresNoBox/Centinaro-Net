@@ -1,4 +1,5 @@
 module.exports = function (app){
+  // List of available users
   app.get('/user', function(req, res) {
     res.header("Content-Type", "application/json");
     res.send(JSON.stringify({users: ['bill','kristi'], total: 2, pages: 0}));

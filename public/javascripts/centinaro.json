@@ -53,35 +53,35 @@
         "question": "What do you like doing best?",
         "answer": {
           "kristi": "I'm happiest when I'm building dynamic, engaging experiences for people on the web.",
-          "bill": "I like being the man behind the curtain."
+          "bill": "I enjoy making functional, efficient, and elegant engines that power interfaces that provide both form and function."
         }
       },
       {
-        "question": "Favorite tools of the trade",
+        "question": "Tools of the trade:",
         "answer": {
           "kristi": "Javascript, HTML5, CSS3",
-          "bill": ""
+          "bill": "Ruby, NodeJs, PhP, and Java."
         }
       },
       {
         "question": "What are your favorite development tools?",
         "answer": {
           "kristi": "I love doing front-end development for anything built in Ruby, Python, and lately, NodeJs. I also prefer to work with SASS over plain CSS.",
-          "bill": ""
+          "bill": "I prefer Ruby with Sinatra or Rails, depending on what the project needs. It's all about the right tool for the job, though."
         }
       },
       {
         "question": "What have you been working on lately?",
         "answer": {
           "kristi": "At work, I have been building mobile-friendly responsive survey \"widgets\". These are used by thousands of surveyers daily at YouGov across many countries!",
-          "bill": ""
+          "bill": "I'm working on a distributed e-commerce solution, which means it's a module that third party sites use to as a payment outlet for featured products, like in a magazine. Right now I'm pulling in features that were a part of other independent products and molding them into one solid product."
         }
       },
       {
         "question": "What do you do for fun?",
         "answer": {
           "kristi": "I just started CrossFit! I like to work out, play video games (Guild Wars 2!), and <a href=\"//inkjetcanvas.deviantart.com\" target=\"_blank\">paint.</a>",
-          "bill": ""
+          "bill": "I've been playing Pen and Paper RP Games for years. I also enjoy playing online games with my wife, and when time allows I enjoy creative writing."
         }
       },
       {

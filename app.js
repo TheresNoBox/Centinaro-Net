@@ -13,7 +13,7 @@ var express = require('express')
 
 
 app.configure(function(){
-  app.set('port', process.env.PORT || 3000);
+  app.set('port', 80);
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
   app.use(express.favicon());
@@ -40,8 +40,6 @@ app.get('/imageGallery', function(req, res){
 server.listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
 });
-
-
 
 //Socket.io Stuffs
 // var userCount = 0; 

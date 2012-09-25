@@ -31,9 +31,9 @@ after "deploy", "deploy:startNode"
 namespace :deploy do
   task :startNode, :roles => :app do
     run "cd #{current_path} && npm install"
-    run "cd #{current_path} &&  node app.js > /dev/null & echo 'Success'"
+  	run "sudo /etc/init.d/node_debian_init.sh start"
   end
   task :stopNode, :roles => :app do
-    run "pkill -9 node & echo 'success'"
+    run "sudo  /etc/init.d/node_debian_init.sh stop"
   end
 end
